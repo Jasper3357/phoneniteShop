@@ -18,7 +18,20 @@
 </section>
 <section class="bg-mainWhite">
   <div class="container space mx-auto py-12">
-    Brands
+    <h3 class="font-bold text-xl">Check out our brands</h3>
+    <div class="splide" role="group" aria-label="Splide Basic HTML Example">
+      <div class="splide__track">
+        <ul class="splide__list">
+          <li class="splide__slide p-6 bg-offWhite">Apple</li>
+          <li class="splide__slide p-6 bg-offWhite">Samsung</li>
+          <li class="splide__slide p-6 bg-offWhite">Huawei</li>
+          <li class="splide__slide p-6 bg-offWhite">Google</li>
+          <li class="splide__slide p-6 bg-offWhite">Xiaomi</li>
+          <li class="splide__slide p-6 bg-offWhite">OnePlus</li>
+          <li class="splide__slide p-6 bg-offWhite">Microsoft</li>
+        </ul>
+      </div>
+    </div>
   </div>
 </section>
 <section class="bg-offWhite">

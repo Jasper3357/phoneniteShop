@@ -7,8 +7,9 @@ export default defineConfig({
             input: [
                 // css files
                 'resources/css/app.css',
+                'resources/css/splide.css',
                 // javascript files
-                'resources/js/app.js'
+                'resources/js/app.js',
             ],
             refresh: true,
         }),
