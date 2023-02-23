@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.space {
+  padding-left: 3%;
+  padding-right: 3%;
+  max-width: 1313px;
+}
+
+.navhover {
+  background-color: rgba(113, 128, 150, 0.0);
+}
+.navHover:hover {
+  background-color: rgba(54, 54, 54, 0.15);
+}
