@@ -8,6 +8,15 @@
   max-width: 1313px;
 }
 
+.homebg {
+  background-color: #313131;
+  background-image: url(../../public/media/bg-home.png);
+  background-repeat: no-repeat;
+  background-position: 90% -25%;
+  padding-top: 80px;
+  display: grid;
+}
+
 .navhover {
   background-color: rgba(113, 128, 150, 0.0);
 }

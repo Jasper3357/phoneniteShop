@@ -1,4 +1,4 @@
-<nav class="w-full py-3 bg-white">
+<nav class="w-full py-3 bg-mainWhite fixed shadow-lg">
   <div class="container mx-auto space">
     <div class="flex flex-row justify-between">
       <div class="flex items-center">
@@ -12,8 +12,13 @@
           <li class="m-4 font-bold uppercase"><a href="" class="p-2 rounded-lg navhover">Contact</a></li>
         </ul>
       </div>
-      <div>
-        account/winkelwagen
+      <div class="flex flex-row items-center gap-2">
+        <div class="p-2 cursor-pointer">
+          <img src="{{ asset('media/user.svg') }}" class="h-6" alt="user">
+        </div>
+        <div class="p-2 cursor-pointer">
+          <img src="{{ asset('media/cart.svg') }}" class="h-6" alt="cart">
+        </div>
       </div>
       <!-- hamburger nav -->
     </div>

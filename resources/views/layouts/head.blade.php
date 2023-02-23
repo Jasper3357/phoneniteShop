@@ -10,8 +10,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="bg-[#232323] text-mainDark font-franklin">
+<body class="bg-mainWhite text-mainDark font-franklin">
   @include('layouts.navbar')
   @yield('content')
+
+  @vite([
+    'resources/js/app.js'
+  ])
 </body>
 </html>

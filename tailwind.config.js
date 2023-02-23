@@ -12,6 +12,10 @@ module.exports = {
       },
       colors: {
         'mainDark': '#313131',
+        'mainPurple' : '#9955EF',
+        'altPurple' : '#7E4BBF',
+        'mainWhite' : '#FFFFFF',
+        'offWhite' : '#F6F6F6',
       },
     },
   },
