@@ -16,7 +16,7 @@
 <body class="bg-mainWhite text-mainDark font-franklin">
   @include('layouts.navbar')
   @yield('content')
-
+  @include('layouts.footer')
   @vite([
     'resources/js/app.js'
   ])
