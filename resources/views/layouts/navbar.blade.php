@@ -1,8 +1,9 @@
-<nav class="w-full py-3 bg-mainWhite fixed shadow-lg">
+<nav class="w-full py-3 bg-mainWhite fixed shadow-lg z-10">
   <div class="container mx-auto space">
     <div class="flex flex-row justify-between">
       <div class="flex items-center">
-        <a href="{{ URL::route('home') }}" class=""><img src="{{ asset('media/logo.svg') }}" alt="Phonenite logo" class="h-10"></a>
+        <a href="{{ URL::route('home') }}" class=""><img src="{{ asset('media/logo.svg') }}" alt="Phonenite logo" class="h-10 hidden sm:block"></a>
+        <a href="{{ URL::route('home') }}" class=""><img src="{{ asset('media/icon.svg') }}" alt="Phonenite logo" class="h-10 block sm:hidden"></a>
       </div>
       <div class="hidden space-x-6 lg:flex">
         <ul class="flex flex-row">
