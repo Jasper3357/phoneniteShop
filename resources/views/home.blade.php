@@ -14,7 +14,7 @@
         <a href="" class="w-1/3 py-2 text-lg font-bold text-center transition-colors ease-in-out rounded-full bg-mainPurple hover:bg-altPurple">Check it Out</a>
       </div>
       <div class="max-w-[50%]">
-        <img src="{{ asset('media/products/cable-usbc-usba.png') }}" class="h-[400px]" alt="PulsarNL usb-c to usb-a cable">
+        <img src="{{ asset('media/products/cable-usbc-usba.png') }}" class="h-[400px] drop-shadow-xl" alt="PulsarNL usb-c to usb-a cable">
       </div>
     </div>
   </div>
@@ -40,8 +40,8 @@
       <h3 class="text-xl font-bold text-mainPurple">PulsarNL</h3>
       <a href="p-6" class="hover:underline">View all ></a>
     </div>
-    <div class="flex flex-col justify-between gap-16 mt-6 lg:flex-row">
-      <div class="flex flex-col sm:flex-row w-[47%] justify-between">
+    <div class="flex flex-col justify-around gap-[3vw] mt-6 lg:flex-row">
+      <div class="flex flex-col gap-[3vw] sm:flex-row w-[47%] justify-between">
         <div class="w-[45%] gap-16 px-8 py-6 bg-white rounded-xl flex justify-between items-center flex-col">
           <img src="{{ asset('media/pulsarnl/home1.png') }}" alt="" class="-mb-8 w-28 aspect-auto">
           <p class="font-semibold text-center">Cables</p>
@@ -51,7 +51,7 @@
           <p class="font-semibold text-center">Chargers</p>
         </div>
       </div>
-      <div class="flex flex-col sm:flex-row w-[47%] justify-between">
+      <div class="flex flex-col gap-[3vw] sm:flex-row w-[47%] justify-between">
         <div class="w-[45%] gap-16 px-8 py-6 bg-white rounded-xl flex justify-between items-center flex-col">
           <img src="{{ asset('media/pulsarnl/home3.png') }}" alt="" class="w-24 -mb-8 mt-7 aspect-auto">
           <p class="font-semibold text-center">Tempered Glass</p>

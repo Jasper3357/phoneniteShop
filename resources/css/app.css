@@ -17,9 +17,3 @@
   display: grid;
 }
 
-.navhover {
-  background-color: rgba(113, 128, 150, 0.0);
-}
-.navHover:hover {
-  background-color: rgba(54, 54, 54, 0.15);
-}
