@@ -42,21 +42,21 @@
     </div>
     <div class="flex flex-col justify-around gap-[3vw] mt-6 lg:flex-row">
       <div class="flex flex-col gap-[3vw] sm:flex-row w-[47%] justify-between">
-        <div class="w-[45%] gap-16 px-8 py-6 bg-white rounded-xl flex justify-between items-center flex-col">
+        <div class="w-[45%] gap-16 px-8 py-6 bg-white rounded-xl hover:cursor-pointer hover:scale-105 hover:shadow-lg transition-all ease-in-out flex justify-between items-center flex-col">
           <img src="{{ asset('media/pulsarnl/home1.png') }}" alt="" class="-mb-8 w-28 aspect-auto">
           <p class="font-semibold text-center">Cables</p>
         </div>
-        <div class="w-[45%] gap-16 px-8 py-6 bg-white rounded-xl flex justify-between items-center flex-col">
+        <div class="w-[45%] gap-16 px-8 py-6 bg-white rounded-xl hover:cursor-pointer hover:scale-105 hover:shadow-lg transition-all ease-in-out flex justify-between items-center flex-col">
           <img src="{{ asset('media/pulsarnl/home2.png') }}" alt="" class="-mb-8 mt-7 w-28 aspect-auto">
           <p class="font-semibold text-center">Chargers</p>
         </div>
       </div>
       <div class="flex flex-col gap-[3vw] sm:flex-row w-[47%] justify-between">
-        <div class="w-[45%] gap-16 px-8 py-6 bg-white rounded-xl flex justify-between items-center flex-col">
+        <div class="w-[45%] gap-16 px-8 py-6 bg-white rounded-xl hover:cursor-pointer hover:scale-105 hover:shadow-lg transition-all ease-in-out flex justify-between items-center flex-col">
           <img src="{{ asset('media/pulsarnl/home3.png') }}" alt="" class="w-24 -mb-8 mt-7 aspect-auto">
           <p class="font-semibold text-center">Tempered Glass</p>
         </div>
-        <div class="w-[45%] gap-16 px-8 py-6 bg-white rounded-xl flex justify-between items-center flex-col">
+        <div class="w-[45%] gap-16 px-8 py-6 bg-white rounded-xl hover:cursor-pointer hover:scale-105 hover:shadow-lg transition-all ease-in-out flex justify-between items-center flex-col">
           <img src="{{ asset('media/pulsarnl/home4.png') }}" alt="" class="mt-10 -mb-8 w-36 aspect-auto">
           <p class="font-semibold text-center">Cases</p>
         </div>
