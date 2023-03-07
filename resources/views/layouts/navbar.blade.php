@@ -13,16 +13,22 @@
         </ul>
       </div>
       <div class="flex flex-row items-center gap-2">
-        <div class="p-2 cursor-pointer">
+        <div class="p-2 cursor-pointer" x-data="{ open: false }" @mouseleave="open = false" @mouseover="open = true"  >
           <div class="p-2">
             <img src="{{ asset('media/user.svg') }}" class="h-6 transition-opacity hover:opacity-75" alt="user">
           </div>
-          <div class="absolute bg-white rounded-lg translate-x-[-90%] drop-shadow-lg" x-show="open" x-transition x-cloak>
+          @guest
+          <div class="absolute bg-white rounded-lg translate-x-[-90%] drop-shadow-lg" x-show="open" x-cloak>
             <div class="px-8 py-6">
               <h2 class="font-bold text-mainDark text-lg">Welcome</h2>
               <p class="font-light text-sm">Log in to use the webshop</p>
               <form action="{{ route('login') }}" method="post" class="mt-6">
                 @csrf
+                @if (session('status'))
+                  <div class="mb-4 border-red-500 bg-red-500 px-5 py-2 border-2 rounded-full w-80 text-white">
+                    <p class="bg-red-500">{{ session('status') }}</p>
+                  </div>
+                @endif
                 <div class="mb-4">
                   <p class="mb-2 text-sm font-bold text-left">Email</p>
                   <input type="email" name="email" id="email" class="bg-offWhite px-5 py-3 rounded-full @error('email') border-red-500 border-2 @enderror w-80" value="{{ old('email') }}">
@@ -50,6 +56,13 @@
             </div>
             
           </div>
+          @endguest
+          @auth
+          <ul class="absolute pt-1 dropdown-menu drop-shadow-lg translate-x-[-60%]" x-show="open" x-cloak>
+            <li class="px-3 py-2 bg-white rounded-t-lg hover:bg-gray-100"><a href="" class=""><p>Dashboard</p></a></li>
+            <li class="px-3 py-2 bg-white rounded-b-lg hover:bg-gray-100"><form action="{{ route('logout') }}" method="post">@csrf<button>Logout</butt></form></li>
+          </ul>
+          @endauth
         </div>
         @auth
         <div class="p-2 cursor-pointer">
