@@ -13,7 +13,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="bg-mainWhite text-mainDark font-franklin container space mx-auto">
+<body class="container mx-auto bg-mainWhite text-mainDark font-franklin space">
   <div class="flex justify-center">
     <a href="{{ route('home') }}"><img src="{{ asset('media/logo.svg') }}" class="h-12 mt-6" alt="phonenite logo"></a>
   </div>
@@ -21,28 +21,28 @@
     @csrf
     <div class="text-center">
       <h1 class="text-3xl font-bold text-mainDark">Product Creator</h1>
-      <h3 class="mb-10 font-light">Log in to your account right here</h3>
+      <h3 class="mb-10 font-light">Create new products and add them to the catalog</h3>
     </div>
-    <div class="mb-6 flex flex-row gap-5">
+    <div class="flex flex-row gap-5 mb-6">
       <div class="w-1/2">
         <p class="mb-2 text-sm font-bold text-left">Name</p>
-        <input type="text" name="name" id="name" class="bg-offWhite px-5 py-3 rounded-full @error('name') border-red-500 border-2 @enderror w-full" value="{{ old('name') }}">
+        <input type="text" name="name" id="name" placeholder="Example Product" class="bg-offWhite px-5 py-3 rounded-full @error('name') border-red-500 border-2 @enderror w-full" value="{{ old('name') }}">
         @error('name')
           <p class="mt-1 text-sm text-left text-red-500">{{ $message }}</p>
         @enderror
       </div>
       <div class="w-1/2">
         <p class="mb-2 text-sm font-bold text-left">Slug</p>
-        <input type="text" name="slug" id="slug" class="bg-offWhite px-5 py-3 rounded-full @error('name') border-red-500 border-2 @enderror w-full" value="{{ old('slug') }}">
+        <input type="text" name="slug" id="slug" placeholder="exampleProduct" class="bg-offWhite px-5 py-3 rounded-full @error('name') border-red-500 border-2 @enderror w-full" value="{{ old('slug') }}">
         @error('slug')
           <p class="mt-1 text-sm text-left text-red-500">{{ $message }}</p>
         @enderror
       </div>
     </div>
-    <div class="mb-6 flex flex-row gap-5">
+    <div class="flex flex-row gap-5 mb-6">
       <div class="w-1/3">
         <p class="mb-2 text-sm font-bold text-left">Brand</p>
-        <select name="brand" id="brand" required class="w-full bg-offWhite px-5 py-3 rounded-full">
+        <select name="brand" id="brand" required class="w-full px-5 py-3 rounded-full bg-offWhite">
           <option value="" disabled selected>Pick a brand</option>
           <option value="pulsarnl">PulsarNL</option>
           <option value="apple">Apple</option>
@@ -62,14 +62,14 @@
       </div>
       <div class="w-1/3">
         <p class="mb-2 text-sm font-bold text-left">Stock</p>
-        <input type="number" step="any" name="stock" id="stock" class="bg-offWhite px-5 py-3 rounded-full @error('stock') border-red-500 border-2 @enderror w-full" value="{{ old('slug') }}">
+        <input type="number" name="stock" id="stock" placeholder="99" class="bg-offWhite px-5 py-3 rounded-full @error('stock') border-red-500 border-2 @enderror w-full" value="{{ old('slug') }}">
         @error('stock')
           <p class="mt-1 text-sm text-left text-red-500">{{ $message }}</p>
         @enderror
       </div>
       <div class="w-1/3">
         <p class="mb-2 text-sm font-bold text-left">Price</p>
-        <input type="number" step="any" name="price" id="price" class="bg-offWhite px-5 py-3 rounded-full @error('price') border-red-500 border-2 @enderror w-full" value="{{ old('slug') }}">
+        <input type="number" step="any" name="price" id="price" placeholder="19.99" class="bg-offWhite px-5 py-3 rounded-full @error('price') border-red-500 border-2 @enderror w-full" value="{{ old('slug') }}">
         @error('price')
           <p class="mt-1 text-sm text-left text-red-500">{{ $message }}</p>
         @enderror
@@ -77,9 +77,9 @@
     </div>
     <div class="mb-6">
       <p class="mb-2 text-sm font-bold text-left">Image</p>
-      <input type="file" name="file" required>
+      <input type="file" name="file" accept="image/png, image/jpeg, image/bmp" required>
     </div>
-    <div class="w-full flex justify-center">
+    <div class="flex justify-center w-full">
       <button type="submit" class="w-1/3 px-4 py-3 mt-4 text-xl font-bold transition-all border-2 rounded-full bg-mainPurple hover:text-mainPurple hover:bg-mainWhite border-mainPurple text-mainWhite">
         Create Product
       </button>

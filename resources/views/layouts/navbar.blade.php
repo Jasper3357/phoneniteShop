@@ -6,9 +6,9 @@
       </div>
       <div class="hidden space-x-6 lg:flex">
         <ul class="flex flex-row">
-          <li class="m-4 font-bold uppercase"><a href="" class="p-2 rounded-lg bg-[#363636] transition-opacity ease-in-out bg-opacity-0 hover:bg-opacity-5">Products</a></li>
+          <li class="m-4 font-bold uppercase"><a href="{{ route('home') }}" class="p-2 rounded-lg bg-[#363636] transition-opacity ease-in-out bg-opacity-0 hover:bg-opacity-5">Home</a></li>
+          <li class="m-4 font-bold uppercase"><a href="{{ route('products') }}" class="p-2 rounded-lg bg-[#363636] transition-opacity ease-in-out bg-opacity-0 hover:bg-opacity-5">Products</a></li>
           <li class="m-4 font-bold uppercase"><a href="" class="p-2 rounded-lg bg-[#363636] transition-opacity ease-in-out bg-opacity-0 hover:bg-opacity-5">PulsarNL</a></li>
-          <li class="m-4 font-bold uppercase"><a href="" class="p-2 rounded-lg bg-[#363636] transition-opacity ease-in-out bg-opacity-0 hover:bg-opacity-5">Sale</a></li>
           <li class="m-4 font-bold uppercase"><a href="" class="p-2 rounded-lg bg-[#363636] transition-opacity ease-in-out bg-opacity-0 hover:bg-opacity-5">Contact</a></li>
         </ul>
       </div>
@@ -20,12 +20,12 @@
           @guest
           <div class="absolute bg-white rounded-lg translate-x-[-90%] drop-shadow-lg" x-show="open" x-cloak>
             <div class="px-8 py-6">
-              <h2 class="font-bold text-mainDark text-lg">Welcome</h2>
-              <p class="font-light text-sm">Log in to use the webshop</p>
+              <h2 class="text-lg font-bold text-mainDark">Welcome</h2>
+              <p class="text-sm font-light">Log in to use the webshop</p>
               <form action="{{ route('login') }}" method="post" class="mt-6">
                 @csrf
                 @if (session('status'))
-                  <div class="mb-4 border-red-500 bg-red-500 px-5 py-2 border-2 rounded-full w-80 text-white">
+                  <div class="px-5 py-2 mb-4 text-white bg-red-500 border-2 border-red-500 rounded-full w-80">
                     <p class="bg-red-500">{{ session('status') }}</p>
                   </div>
                 @endif
@@ -43,11 +43,11 @@
                     <p class="mt-1 text-sm text-left text-red-500">{{ $message }}</p>
                   @enderror
                 </div>
-                <button type="submit" class="w-80 px-4 py-3 mt-4 text-lg font-bold transition-all border-2 rounded-full bg-mainPurple hover:text-mainPurple hover:bg-mainWhite border-mainPurple text-mainWhite">
+                <button type="submit" class="px-4 py-3 mt-4 text-lg font-bold transition-all border-2 rounded-full w-80 bg-mainPurple hover:text-mainPurple hover:bg-mainWhite border-mainPurple text-mainWhite">
                   Login
                 </button>
               </form>
-              <div class="w-full flex justify-center mt-4">
+              <div class="flex justify-center w-full mt-4">
                 <div class="flex gap-2 text-sm">
                   <p>Don't have an account yet?</p>
                   <a href="{{ route('register') }}" class="font-bold text-mainPurple hover:underline">Register here</a>

@@ -4,7 +4,7 @@
 
 @section('content')
 @php
-  $brands = ["apple", "samsung", "huawei", "google", "xiaomi", "oneplus", "motorola", "microsoft", "oppo", "honor"];
+  $brands = ["apple", "samsung", "huawei", "google", "xiaomi", "oneplus", "motorola", "microsoft", "oppo", "honor", "pulsarnl"];
 @endphp
 <section class="homebg text-mainWhite">
   <div class="container py-16 mx-auto space">

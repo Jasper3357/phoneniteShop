@@ -30,3 +30,5 @@ Route::post('/login', [LoginController::class, 'store']);
 Route::post('/logout', [LogoutController::class, 'store'])->name('logout');
 
 Route::resource('products', 'App\Http\Controllers\ProductController');
+
+Route::get('/products', [ProductController::class, 'index'])->name('products');
