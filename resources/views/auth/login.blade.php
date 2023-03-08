@@ -50,6 +50,10 @@
                 <button type="submit" class="w-2/3 px-4 py-3 mt-4 text-xl font-bold transition-all border-2 rounded-full bg-mainPurple hover:text-mainPurple hover:bg-mainWhite border-mainPurple text-mainWhite">
                   Login
                 </button>
+                <div class="flex flex-row w-full justify-center gap-2 mt-3">
+                  <p>Don't have an account yet?</p>
+                  <a href="{{ route('register') }}" class="font-bold text-mainPurple hover:underline">Register here</a>
+                </div>
               </form>
             </div>
           </div>

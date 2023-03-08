@@ -56,7 +56,12 @@
                 <button type="submit" class="w-2/3 px-4 py-3 mt-4 text-xl font-bold transition-all border-2 rounded-full bg-mainPurple hover:text-mainPurple hover:bg-mainWhite border-mainPurple text-mainWhite">
                   Register
                 </button>
+                <div class="flex flex-row w-full justify-center gap-2 mt-3">
+                  <p>Already have an account?</p>
+                  <a href="{{ route('login') }}" class="font-bold text-mainPurple hover:underline">Log in</a>
+                </div>
               </form>
+              
             </div>
           </div>
         </div>
