@@ -2,6 +2,10 @@ import './bootstrap';
 import Alpine from 'alpinejs'
 import Splide from '@splidejs/splide';
 
+window.Alpine = Alpine
+ 
+Alpine.start()
+
 new Splide( '.splide',{
   type: 'loop',
   perPage: 4,
@@ -13,6 +17,3 @@ new Splide( '.splide',{
   arrows: true,
 } ).mount();
  
-window.Alpine = Alpine
- 
-Alpine.start()

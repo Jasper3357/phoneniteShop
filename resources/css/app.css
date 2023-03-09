@@ -19,3 +19,11 @@
   display: grid;
 }
 
+.button {
+  box-shadow: 0 5px 0 #7E4BBF;
+}
+
+.butto:active {
+  box-shadow: none;
+  transform: translateY(5px);
+}
