@@ -66,7 +66,7 @@
         </div>
         @auth
         <div class="p-2 cursor-pointer">
-          <img src="{{ asset('media/cart.svg') }}" class="h-6 transition-opacity hover:opacity-75" alt="cart">
+          <a href="{{ route('cart') }}"><img src="{{ asset('media/cart.svg') }}" class="h-6 transition-opacity hover:opacity-75" alt="cart"></a>
         </div>
         @endauth
       </div>

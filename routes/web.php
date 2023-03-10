@@ -32,3 +32,9 @@ Route::post('/logout', [LogoutController::class, 'store'])->name('logout');
 Route::resource('products', 'App\Http\Controllers\ProductController');
 
 Route::get('/products', [ProductController::class, 'index'])->name('products');
+
+Route::get('/cart', [ProductController::class, 'cart'])->name('cart');
+
+Route::get('/add-to-cart/{id}', [ProductController::class, 'addToCart'])->name('addToCart');
+Route::patch('update-cart', 'ProductsController@updateCart')->name('updateCart');
+Route::delete('remove-from-cart', 'ProductsController@removeCart')->name('removeCart');
