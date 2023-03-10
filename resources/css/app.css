@@ -23,7 +23,28 @@
   box-shadow: 0 5px 0 #7E4BBF;
 }
 
-.butto:active {
+.button:active {
   box-shadow: none;
   transform: translateY(5px);
+}
+
+* {
+	margin: 0;
+}
+
+html, body {
+	height: 100%;
+}
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+	margin-bottom: -112px; 
+}
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+.site-footer, .page-wrap:after {
+  /* .push must be the same height as footer */
+	height: 112px; 
 }

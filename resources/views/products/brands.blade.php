@@ -1,13 +1,13 @@
 @extends('layouts.head')
 
-@section('title')Products @endsection
+@section('title'){{ $brand }} @endsection
 
 @section('content')
 <section class="pt-[80px] bg-mainWhite">
   <div class="container mx-auto space">
-    <div class="mt-12 text-center">
-        <h1 class="text-3xl font-bold text-mainDark">Products</h1>
-        <h3 class="mb-10 font-light">Here you can see all our products</h3>
+    <div class="mt-12 text-center capitalize">
+        <h1 class="text-3xl font-bold @if($brand == 'pulsarnl') text-mainPurple @else text-mainDark @endif">{{ $brand }}</h1>
+        <h3 class="mb-10 font-light">Check out all our {{ $brand }} products</h3>
     </div>
     <div class="flex flex-row flex-wrap justify-between gap-x-2 gap-y-10">
       @foreach ($products as $product)

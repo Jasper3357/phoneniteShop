@@ -1,6 +1,9 @@
 import './bootstrap';
 import Alpine from 'alpinejs'
 import Splide from '@splidejs/splide';
+import jQuery from 'jquery';
+
+window.$ = jQuery;
 
 window.Alpine = Alpine
  

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class ProductController extends Controller
 {
@@ -16,6 +17,22 @@ class ProductController extends Controller
 
         return view('products.index', [
             'products' => $products,
+        ]);
+    }
+
+    /**
+     * Display a listing of the resource.
+     */
+    public function brands($brand)
+    {
+        $brandQuery = DB::table('products');
+        $brandQuery->where('brand', '=', $brand);
+
+        $products = $brandQuery->get();
+
+        return view('products.brands', [
+            'products' => $products,
+            'brand' => $brand,
         ]);
     }
 
@@ -78,7 +95,7 @@ class ProductController extends Controller
     public function updateCart(Request $request)
     {
         if($request->id and $request->quantity)
-        {
+        {   
             $cart = session()->get('cart');
             $cart[$request->id]["quantity"] = $request->quantity;
             session()->put('cart', $cart);
@@ -96,6 +113,12 @@ class ProductController extends Controller
             }
             session()->flash('success', 'Product removed successfully');
         }
+    }
+
+    public function clearCart()
+    {
+        session()->forget('cart');
+        return view('paymentComplete');
     }
     /**
      * Store a newly created resource in storage.

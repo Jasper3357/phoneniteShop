@@ -39,7 +39,7 @@
             <input type="number" class="text-center form-control" value="{{ $details['quantity'] }}">
           </td>
           <td data-th="Subtotal" class="text-center"><x-money amount="{{ $details['price'] * $details['quantity'] }}" currency="EUR"/></td>
-          <td class=" actions" data-th="">
+          <td class="hidden actions" data-th="">
             <div class="flex flex-row gap-3">
               <button class="update-cart">Refresh</button>
               <button class="remove-from-cart">Delete</button>
@@ -58,32 +58,41 @@
     </tr>
     </tfoot>
   </table>
-  <div class="my-10">
-    <a href="{{ route('products') }}" class="px-4 py-2 mt-8 text-base font-bold transition-all border-2 rounded-full w-80 bg-mainPurple hover:text-mainPurple hover:bg-mainWhite border-mainPurple text-mainWhite">Continue Shopping</a>
+  <div class="flex flex-row justify-between">
+    <div class="my-10">
+      <a href="{{ route('products') }}" class="px-4 py-2 mt-8 text-base font-bold transition-all border-2 rounded-full w-80 bg-mainPurple hover:text-mainPurple hover:bg-mainWhite border-mainPurple text-mainWhite">Continue Shopping</a>
+    </div>
+    <div class="my-10">
+      <a href="{{ route('paymentComplete') }}" class="py-2 mt-8 text-base font-bold transition-all border-2 rounded-full px-14 w-80 bg-[#f5c518] hover:text-[#f5c518] hover:bg-mainWhite border-[#f5c518] text-mainDark">Checkout</a>
+    </div>
   </div>
+  
 </section>
 @endsection
 
 @section('scripts')
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script type="text/javascript">
         $(".update-cart").click(function (e) {
            e.preventDefault();
            var ele = $(this);
+           console.log('pre-ajax');
             $.ajax({
-               url: '{{ route('updateCart') }}',
+               url: '{{ url('update-cart') }}',
                method: "patch",
                data: {_token: '{{ csrf_token() }}', id: ele.attr("data-id"), quantity: ele.parents("tr").find(".quantity").val()},
                success: function (response) {
                    window.location.reload();
                }
             });
+            console.log('afte ajax');
         });
         $(".remove-from-cart").click(function (e) {
             e.preventDefault();
             var ele = $(this);
             if(confirm("Are you sure")) {
                 $.ajax({
-                    url: '{{ route('removeCart') }}',
+                    url: '{{ url('remove-from-cart') }}',
                     method: "DELETE",
                     data: {_token: '{{ csrf_token() }}', id: ele.attr("data-id")},
                     success: function (response) {

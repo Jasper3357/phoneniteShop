@@ -11,7 +11,7 @@
     <div class="flex flex-row items-center justify-between gap-2">
       <div class="max-w-[50%] flex flex-col gap-16">
         <h1 class="w-3/4 text-5xl font-bold">The New PulsarNL Collection is Here!</h1>
-        <a href="" class="w-1/3 py-2 text-lg font-bold text-center transition-colors ease-in-out rounded-full bg-mainPurple hover:bg-altPurple">Check it Out</a>
+        <a href="{{ route('brands', 'pulsarnl') }}" class="w-1/3 py-2 text-lg font-bold text-center transition-colors ease-in-out rounded-full bg-mainPurple hover:bg-altPurple">Check it Out</a>
       </div>
       <div class="max-w-[50%]">
         <img src="{{ asset('media/products/cable-usbc-usba.png') }}" class="h-[400px] drop-shadow-xl" alt="PulsarNL usb-c to usb-a cable">
@@ -27,7 +27,11 @@
         <ul class="text-center splide__list">
           @foreach ($brands as $brand)
             @php $img = $brand.'.png' @endphp
-            <li class="flex items-center justify-center h-32 splide__slide bg-offWhite rounded-xl"><img src="{{ asset('media/brands/'. $img) }}" alt="{{$brand}}" class="h-full"></li>
+            <li class="h-32 splide__slide bg-offWhite rounded-xl">
+              <a href="{{ route('brands', $brand) }}" class="h-full w-full flex items-center justify-center">
+                <img src="{{ asset('media/brands/'. $img) }}" alt="{{$brand}}" class="h-full">
+              </a>
+            </li>
           @endforeach
         </ul>
       </div>
@@ -38,7 +42,7 @@
   <div class="container py-12 mx-auto space">
     <div class="flex flex-row justify-between">
       <h3 class="text-xl font-bold text-mainPurple">PulsarNL</h3>
-      <a href="p-6" class="hover:underline">View all ></a>
+      <a href="{{ route('brands', 'pulsarnl') }}" class="hover:underline">View all ></a>
     </div>
     <div class="flex flex-col justify-around gap-[3vw] mt-6 lg:flex-row">
       <div class="flex flex-col gap-[3vw] sm:flex-row w-[47%] justify-between">

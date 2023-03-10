@@ -1,4 +1,4 @@
-<footer class="py-8 text-mainDark bg-mainWhite">
+<footer class="py-8 site-footer text-mainDark bg-mainWhite">
   <div class="container mx-auto space">
     <div class="flex flex-col items-center">
       <a href="{{ URL::route('home') }}"><img src="{{ asset('media/logo.svg') }}" alt="phonenite logo" class="h-10"></a>
